@@ -1,3 +1,6 @@
+const jwt = require('jsonwebtoken')
+
+const authConfig = require('../../config/auth')
 const connection = require('../../database/connection')
 
 class SessionController {
@@ -10,7 +13,12 @@ class SessionController {
       return response.status(401).json({ error: "No ONG found with this ID"})
     }
     
-    return response.json(ong)
+    return response.json({
+      ong,
+      token: jwt.sign({ id }, authConfig.secret, {
+        expiresIn: authConfig.expiresIn,
+      }),
+    })
   }
 }
 
