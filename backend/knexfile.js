@@ -15,6 +15,21 @@ module.exports = {
       //tableName: 'knex_migrations'
     }
   },
+  
+  test: {
+    client: 'postgresql', //'sqlite3',
+    connection: {
+      host: 'salt.db.elephantsql.com',
+      database: 'ciyieeng',
+      user: 'ciyieeng',
+      password: 'XmKd8WK1Ednr35gwCCV-wjIrneCOPwH5',
+      //filename: './dev.sqlite3'
+    },
+    migrations: {
+      directory: './src/database/migrations',
+      //tableName: 'knex_migrations'
+    }
+  },
 
   staging: {
     client: 'postgresql',
