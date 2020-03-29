@@ -7,6 +7,8 @@
   <b>implementações feita por mim:</b>
   <ul>
     <li>Autenticação com JWT</li>
+    <li>PWA</li>
+    <li>loading do scroll no final em React Native</li>
     <li>Tela responsiva</li>
     <li>Helmet para segurança dos cabeçalhos</li>
   </ul>
