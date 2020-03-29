@@ -1,8 +1,7 @@
 <h1 align="center"> semana-omnistack-11 </h1>
 
 <h2 align="center">BE-THE-HERO</h2>
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-%40helitonoliveira-blue)](https://www.linkedin.com/in/matheusgbatista)
-  [![Rockeseat](https://img.shields.io/badge/Rocketseat-%40rocketseat-purple)](https://github.com/Rocketseat)
+![Custom badge](https://img.shields.io/endpoint?color=%23054f77&label=LinkedIn&logo=LinkedIn&logoColor=blue&url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmatheusgbatista)
 
   <p> Aplicação desenvolvida na Semana OmniStack!</p>
   
