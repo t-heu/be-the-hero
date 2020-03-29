@@ -26,7 +26,7 @@ export default function NewIncident() {
     try {
       api.post('incidents', data, {
         headers: {
-          Authorization: ongId
+          Authorization:  `Bearer ${ongId}`
         }
       })
       history.push('/profile')
