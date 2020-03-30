@@ -3,7 +3,8 @@ import { Link, useHistory } from 'react-router-dom'
 import { FiArrowLeft } from 'react-icons/fi'
 
 import logoImg from '../../assets/logo.svg'
-import './styles.css'
+import { ButtonD, Lin } from '../../global'
+import { Container } from './styles'
 import api from '../../services/api'
 
 const ongId = localStorage.getItem('ongId')
@@ -36,17 +37,19 @@ export default function NewIncident() {
   }
   
   return (
-    <div className="new-incident-container">
+    <Container>
       <div className="content">
         <section>
           <img src={logoImg} alt="logo" />
           <h1>Cadastrar novo caso</h1>
           <p>Descreva o caso detalhadamento para encontrar um herói para resolver isso.</p>
           
-          <Link className="back-link" to="/profile">
-            <FiArrowLeft size={16} color="#e02041" />
-            Voltar para o home
-          </Link>
+          <Lin>
+            <Link className="back-link" to="/profile">
+              <FiArrowLeft size={16} color="#e02041" />
+              Voltar para o home
+            </Link>
+          </Lin>
         </section>
     
         <form onSubmit={handleNewIncident}>
@@ -54,9 +57,9 @@ export default function NewIncident() {
           <textarea placeholder="Descrição" value={description} onChange={e => setDescription(e.target.value)} />
           <input placeholder="Valor em reais" value={value} onChange={e => setValue(e.target.value)} />
           
-          <button type="submit" className="button">Cadastrar</button>
+          <ButtonD type="submit" className="button">Cadastrar</ButtonD>
         </form>
       </div>
-    </div>
+    </Container>
   )
 }

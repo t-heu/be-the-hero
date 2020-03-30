@@ -24,6 +24,7 @@ Este maravilindo projeto foi desenvolvido com as seguintes tecnologias:
 ### implementações adicionais por mim:
 - Autenticação com JWT
 - PWA
+- Styled Components
 - loading do scroll no final em React Native
 - Tela responsiva
 - Helmet para segurança dos cabeçalhos

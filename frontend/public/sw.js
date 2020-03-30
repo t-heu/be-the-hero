@@ -1,7 +1,8 @@
 const cacheName = 'news-v1';
 const staticAssets = [
-  './',
+  //'./',
   './index.html',
+  './icon.png'
 ];
 
 self.addEventListener('install', async e => {

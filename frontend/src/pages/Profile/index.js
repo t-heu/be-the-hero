@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { FiPower, FiTrash2 } from 'react-icons/fi'
 
-import './styles.css'
+import { Container, StyledLink } from './styles'
 import logoImg from '../../assets/logo.svg'
 import api from '../../services/api'
 
@@ -42,12 +42,13 @@ export default function Profile() {
   }
 
   return (
-    <div className="profile-container">
+    <Container>
       <header>
         <img src={logoImg} alt="logo" />
         <span>Bem-vinda, {ongName}</span>
-          
-        <Link className="button" to="/incidents/new">Cadastrar novo caso</Link>
+        
+        <StyledLink to="/incidents/new">Cadastrar novo caso</StyledLink>
+        
         <button onClick={handleLogout}>
           <FiPower size={18} color="#e02041" />
         </button>
@@ -73,6 +74,6 @@ export default function Profile() {
           </li>
         ))}
       </ul>
-    </div>
+    </Container>
   )
 }

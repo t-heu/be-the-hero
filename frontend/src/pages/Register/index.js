@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { FiArrowLeft } from 'react-icons/fi'
 
-import './styles.css'
+import { Container } from './styles'
+import { ButtonD, Lin } from '../../global'
+
 import logoImg from '../../assets/logo.svg'
 import api from '../../services/api'
 
@@ -35,17 +37,19 @@ export default function Register() {
   }
 
   return (
-    <div className="register-container">
+    <Container>
       <div className="content">
         <section>
           <img src={logoImg} alt="logo" />
           <h1>Cadastro</h1>
           <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
           
-          <Link className="back-link" to="/">
-            <FiArrowLeft size={16} color="#e02041" />
-            Já tenho cadastro
-          </Link>
+          <Lin>
+            <Link className="back-link" to="/">
+              <FiArrowLeft size={16} color="#e02041" />
+              Já tenho cadastro
+            </Link>
+          </Lin>
         </section>
 
         <form onSubmit={handleRegister}>
@@ -56,9 +60,9 @@ export default function Register() {
             <input placeholder="Cidade" value={city} onChange={e => setCity(e.target.value)} />
             <input placeholder="UF" style={{ width: 80 }} value={uf} onChange={e => setUf(e.target.value)} />
           </div>
-          <button type="submit" className="button">Cadastrar</button>
+          <ButtonD type="submit" className="button">Cadastrar</ButtonD>
         </form>
       </div>
-    </div>
+    </Container>
   )
 }
